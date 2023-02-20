@@ -1,6 +1,7 @@
 # Zapateria Angelina
 Main branch
 
+**Isidro brach**
 # Indice
 - [Instalar git](#instalar-git)
 - [Configuracion](#configuracion-inicial)
