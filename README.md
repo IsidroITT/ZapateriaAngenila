@@ -1,13 +1,14 @@
 # Zapateria Angelina
 Main branch
 
-**Isidro brach**
+**Isidro brach** 'Ejemplo de nombre'
 # Indice
 - [Instalar git](#instalar-git)
 - [Configuracion](#configuracion-inicial)
 - [Github y SSH](#crear-un-usuario-en-github-y-agregar-clave-ssh)
 - [Clonar un repositorio](#clonar-un-repositorio-de-github)
 - [Obtener permisos](#obtener-permisos-de-lectura/escritura)
+- [Branch's](#branch-o-ramas)
 - [Subir cambios](#subir-los-cambios-al-repositorio)
 
 # Instalar git
@@ -88,7 +89,52 @@ siguiente comando
 ![clonar repo](./Imagenes/clone-ssh.png)
 
 # Obtener permisos de lectura/escritura
+Solo es necesario acpetar la solicitud de correo de invitacion a colaborar en el proyecto
 
-# Moverse en una branch
+# Branch o ramas
+Para poder realizar cambios de manera segura dentro del proyecto y mantener una area de trabajo con la que poder
+presentar es posible crear ramas/espacios de trabajo 'aislados' que permiten modificar el codigo del proyecto
+sin afectar al proyecto pricipal para crear una rama es necesario encontrarnos dentro de la carpeta del proyeto
+y ejecutar el comando
 
+*Este apartado aun esta en proceso por lo que puede contener errores, asi que dejare un enlace de apoyo*
+[Ramas en git](https://www.atlassian.com/es/git/tutorials/using-branches)
+
+``` bash
+  # Comando para crear la rama
+  git branch nombre_de_la_rama_a_crear
+
+  # Comando para moverse a la rama que acabas de crear
+  git checkout nombre_de_la que_acabas_de_crear
+```   
+
+Una vez dentro de la nueva rama podas realizar los cambios que crear necesarios, y para probar este apartado
+sera necesario ir a la capeta del proyecto (dentro de la nueva rama) y editar este documneto con tu nombre 
+despues de 'Main branch', puedes usar el ejempo que deje para poner tu nombre.
+
+Una vez hecho esto dentro del terminal (git bash o powersell) realizaras
+``` bash
+  # Agregaras todos los cambios al arbol de trabajo
+  git add -A
+
+  # Comentaras los cambios realizados
+  git commit -m "el comentario que quieras realizar"
+
+  # Combinaras los cambios de tu rama con la rama principal
+  git merge main
+
+  # Regresaras a la rama principal
+  git chechout main
+
+  # Subiras los cambios al repositorio
+  git push -u origin main
+
+  # Es posbl que no te permita subir los cambios porque no estas identificado en el servidor de github
+  # para ello dentro del termina ejecutaras
+  eval "$(ssh-agent -s)"
+  ssh-add direccion_de_la_clave_ssh_privada #Es la que NO termina con '.pub'
+
+  # Y nuevamente 
+  git push -u origin main
+```
 # Subir los cambios al repositorio
