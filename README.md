@@ -77,6 +77,14 @@ Es posible que llegue a ser un poco complicado al principio, asi que dejare un v
 [SSH GITHUB](https://www.youtube.com/watch?v=tY6IKEYz5vU)
 
 # Clonar un repositorio de github
+Esto es muy sencillo, solamente tenemos que dirigirnos a una carpeta vacia donde querramos clonar el repositorio
+y abrir git bash con click derecho abrir un terminal aqui o algo asi deberia aparecer el windows, y ejecutar el 
+siguiente comando
+``` bash
+  git clone git@github.com:IsidroITT/ZapateriaAngenila.git
+```
+
+![clonar repo](./Imagenes/clone-ssh.png)
 
 # Obtener permisos de lectura/escritura
 
